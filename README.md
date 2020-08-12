@@ -15,7 +15,6 @@ Your solution:
 function repeat(values){
 
     return Array(3).fill(values).flat();
-
 }
 
 repeat([1,2,3]);
@@ -31,6 +30,17 @@ Make this work (no vowels, lowercase except the first letter):
 reformat("liMeSHArp DeveLoper TEST") //Lmshrp dvlpr tst
 ```
 Your solution:
+
+```
+function reformat(str) {
+
+    const msg =  str.replace(/[aeiou]/gi,"").toLowerCase();
+    return msg.charAt(0).toUpperCase()+ msg.slice(1);
+    
+}
+
+reformat('liMeSHArp DeveLoper TEST');
+```
 
 ###### If we type in our console your function and reformat("liMeSHArp DeveLoper TEST") then the result should be Lmshrp dvlpr tst
 
